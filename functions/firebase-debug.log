@@ -1,0 +1,136 @@
+[debug] [2025-04-06T16:19:57.230Z] ----------------------------------------------------------------------
+[debug] [2025-04-06T16:19:57.236Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shenuka navod\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2025-04-06T16:19:57.236Z] CLI Version:   14.1.0
+[debug] [2025-04-06T16:19:57.238Z] Platform:      win32
+[debug] [2025-04-06T16:19:57.238Z] Node Version:  v22.14.0
+[debug] [2025-04-06T16:19:57.238Z] Time:          Sun Apr 06 2025 21:49:57 GMT+0530 (India Standard Time)
+[debug] [2025-04-06T16:19:57.238Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-06T16:19:57.452Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-06T16:19:57.456Z] > authorizing via signed-in user (shenukanavod12@gmail.com)
+[debug] [2025-04-06T16:19:57.457Z] [iam] checking project share-8cabd for permissions ["firebase.projects.get"]
+[debug] [2025-04-06T16:19:57.458Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:19:57.458Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:19:57.459Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions [none]
+[debug] [2025-04-06T16:19:57.459Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions x-goog-quota-user=projects/share-8cabd
+[debug] [2025-04-06T16:19:57.459Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-04-06T16:19:59.198Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions 200
+[debug] [2025-04-06T16:19:59.198Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-04-06T16:19:59.203Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-04-06T16:19:59.254Z] defaultcredentials: writing to file C:\Users\Shenuka navod\AppData\Roaming\firebase\shenukanavod12_gmail_com_application_default_credentials.json
+[debug] [2025-04-06T16:19:59.256Z] DEBUG: Setting GAC to C:\Users\Shenuka navod\AppData\Roaming\firebase\shenukanavod12_gmail_com_application_default_credentials.json
+[debug] [2025-04-06T16:19:59.257Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:19:59.257Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:19:59.258Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig [none]
+[debug] [2025-04-06T16:20:00.896Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig 200
+[debug] [2025-04-06T16:20:00.896Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig {"projectId":"share-8cabd","databaseURL":"https://share-8cabd-default-rtdb.firebaseio.com","storageBucket":"share-8cabd.firebasestorage.app"}
+[debug] [2025-04-06T16:20:00.909Z] [functions] Watching "C:\Secure_share\functions" for Cloud Functions...
+[debug] [2025-04-06T16:20:00.914Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-04-06T16:20:07.603Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"Lint skipped\"",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/storage": "6.9.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^4.4.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "overrides": {
+    "@google-cloud/storage": "6.9.2"
+  },
+  "private": true
+}
+[debug] [2025-04-06T16:20:07.603Z] Building nodejs source
+[debug] [2025-04-06T16:20:07.604Z] Failed to find version of module node: reached end of search path C:\Secure_share\functions\node_modules
+[warn] !  functions: Your requested "node" version "20" doesn't match your global version "22". Using node@22 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-04-06T16:20:07.606Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-04-06T16:20:07.614Z] Found firebase-functions binary at 'C:\Secure_share\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8019
+
+[debug] [2025-04-06T16:20:08.046Z] Got response from /__/functions.yaml {"endpoints":{"createNewUser":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createNewUser"},"grantAdminRole":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"grantAdminRole"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2025-04-06T16:20:12.093Z] [functions] Loaded functions definitions from source: createNewUser, grantAdminRole.
+[debug] [2025-04-06T16:20:12.095Z] [functions[us-central1-createNewUser]] http function initialized (http://127.0.0.1:5000/share-8cabd/us-central1/createNewUser).
+[debug] [2025-04-06T16:20:12.095Z] [functions[us-central1-grantAdminRole]] http function initialized (http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole).
+[info] i  functions: Loaded functions: createNewUser, grantAdminRole 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
+[debug] [2025-04-06T16:20:24.023Z] >>> [apiv2][query] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ [none]
+[debug] [2025-04-06T16:20:24.023Z] >>> [apiv2][body] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ {"uid":"xWj6MYv0SgYGXLsbrmRpyIP1bdi2"}
+[debug] [2025-04-06T16:20:24.038Z] [work-queue] {"queuedWork":["/share-8cabd/us-central1/grantAdminRole/-2025-04-06T16:20:24.038Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-04-06T16:20:24.038Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/share-8cabd/us-central1/grantAdminRole/-2025-04-06T16:20:24.038Z"],"workRunningCount":1}
+[debug] [2025-04-06T16:20:24.039Z] Accepted request POST /share-8cabd/us-central1/grantAdminRole/ --> us-central1-grantAdminRole
+[debug] [2025-04-06T16:20:24.057Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2025-04-06T16:20:24.058Z] DEBUG: [functions] Got req.url=/share-8cabd/us-central1/grantAdminRole/, mapping to path=/
+[debug] [2025-04-06T16:20:25.298Z] DEBUG: [worker-pool] addWorker(us-central1-grantAdminRole)
+[debug] [2025-04-06T16:20:25.299Z] DEBUG: [worker-pool] Adding worker with key us-central1-grantAdminRole, total=1
+[debug] [2025-04-06T16:20:26.222Z] DEBUG: [runtime-status] [16340] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2025-04-06T16:20:26.223Z] DEBUG: [runtime-status] [16340] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}
+[debug] [2025-04-06T16:20:26.223Z] DEBUG: [runtime-status] [16340] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2025-04-06T16:20:26.224Z] DEBUG: [runtime-status] [16340] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}
+[debug] [2025-04-06T16:20:26.528Z] DEBUG: [runtime-status] [16340] Checked functions.config() {"config":{}}
+[debug] [2025-04-06T16:20:26.528Z] DEBUG: [runtime-status] [16340] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.9.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}}
+[debug] [2025-04-06T16:20:26.529Z] DEBUG: [runtime-status] [16340] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}
+[debug] [2025-04-06T16:20:26.530Z] DEBUG: [runtime-status] [16340] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2025-04-06T16:20:26.531Z] DEBUG: [runtime-status] [16340] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.9.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}
+[debug] [2025-04-06T16:20:26.532Z] DEBUG: [runtime-status] [16340] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Secure_share\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2025-04-06T16:20:26.536Z] DEBUG: [runtime-status] [16340] initializeApp(DEFAULT) {"storageBucket":"share-8cabd.firebasestorage.app","databaseURL":"https://share-8cabd-default-rtdb.firebaseio.com","projectId":"share-8cabd"}
+[debug] [2025-04-06T16:20:26.539Z] DEBUG: [runtime-status] [16340] Functions runtime initialized. {"cwd":"C:\\Secure_share\\functions","node_version":"22.14.0"}
+[debug] [2025-04-06T16:20:26.539Z] DEBUG: [runtime-status] [16340] Listening to port: \\?\pipe\fire_emu_4229aa1c37291547
+[debug] [2025-04-06T16:20:26.616Z] DEBUG: [worker-us-central1-grantAdminRole-9809dd72-d7c9-4456-9395-3a703e512ceb]: IDLE
+[debug] [2025-04-06T16:20:26.616Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-grantAdminRole)
+[debug] [2025-04-06T16:20:26.616Z] [functions] Beginning execution of "us-central1-grantAdminRole"
+[debug] [2025-04-06T16:20:26.616Z] DEBUG: [worker-us-central1-grantAdminRole-9809dd72-d7c9-4456-9395-3a703e512ceb]: BUSY
+[info] >  {"uid":"xWj6MYv0SgYGXLsbrmRpyIP1bdi2","severity":"WARNING","message":"Request body is missing data."} {"user":{"uid":"xWj6MYv0SgYGXLsbrmRpyIP1bdi2","severity":"WARNING","message":"Request body is missing data."},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-grantAdminRole"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"uid\":\"xWj6MYv0SgYGXLsbrmRpyIP1bdi2\",\"severity\":\"WARNING\",\"message\":\"Request body is missing data.\"}"}}
+[info] >  {"severity":"ERROR","message":"Error: Invalid request, unable to process.\n    at entryFromArgs (C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\logger\\index.js:130:19)\n    at Object.error (C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\logger\\index.js:116:11)\n    at C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\common\\providers\\https.js:405:24\n    at C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\common\\providers\\https.js:394:25\n    at cors (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:188:7)\n    at C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:224:17\n    at originCallback (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:214:15)\n    at C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:219:13\n    at optionsCallback (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:199:9)\n    at corsMiddleware (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:204:7)"} {"user":{"severity":"ERROR","message":"Error: Invalid request, unable to process.\n    at entryFromArgs (C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\logger\\index.js:130:19)\n    at Object.error (C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\logger\\index.js:116:11)\n    at C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\common\\providers\\https.js:405:24\n    at C:\\Secure_share\\functions\\node_modules\\firebase-functions\\lib\\common\\providers\\https.js:394:25\n    at cors (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:188:7)\n    at C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:224:17\n    at originCallback (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:214:15)\n    at C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:219:13\n    at optionsCallback (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:199:9)\n    at corsMiddleware (C:\\Secure_share\\functions\\node_modules\\cors\\lib\\index.js:204:7)"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-grantAdminRole"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"ERROR\",\"message\":\"Error: Invalid request, unable to process.\\n    at entryFromArgs (C:\\\\Secure_share\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\logger\\\\index.js:130:19)\\n    at Object.error (C:\\\\Secure_share\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\logger\\\\index.js:116:11)\\n    at C:\\\\Secure_share\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\common\\\\providers\\\\https.js:405:24\\n    at C:\\\\Secure_share\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\common\\\\providers\\\\https.js:394:25\\n    at cors (C:\\\\Secure_share\\\\functions\\\\node_modules\\\\cors\\\\lib\\\\index.js:188:7)\\n    at C:\\\\Secure_share\\\\functions\\\\node_modules\\\\cors\\\\lib\\\\index.js:224:17\\n    at originCallback (C:\\\\Secure_share\\\\functions\\\\node_modules\\\\cors\\\\lib\\\\index.js:214:15)\\n    at C:\\\\Secure_share\\\\functions\\\\node_modules\\\\cors\\\\lib\\\\index.js:219:13\\n    at optionsCallback (C:\\\\Secure_share\\\\functions\\\\node_modules\\\\cors\\\\lib\\\\index.js:199:9)\\n    at corsMiddleware (C:\\\\Secure_share\\\\functions\\\\node_modules\\\\cors\\\\lib\\\\index.js:204:7)\"}"}}
+[debug] [2025-04-06T16:20:26.634Z] DEBUG: Finishing up request with event=pause
+[debug] [2025-04-06T16:20:26.634Z] [functions] Finished "us-central1-grantAdminRole" in 17.5169ms
+[debug] [2025-04-06T16:20:26.634Z] DEBUG: [worker-us-central1-grantAdminRole-9809dd72-d7c9-4456-9395-3a703e512ceb]: IDLE
+[debug] [2025-04-06T16:20:26.634Z] DEBUG: Finishing up request with event=finish
+[debug] [2025-04-06T16:20:26.634Z] DEBUG: Finishing up request with event=close
+[debug] [2025-04-06T16:20:26.634Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-04-06T16:20:26.636Z] <<< [apiv2][status] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ 400
+[debug] [2025-04-06T16:20:26.637Z] <<< [apiv2][body] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ {"error":{"message":"Bad Request","status":"INVALID_ARGUMENT"}}
+[debug] [2025-04-06T16:22:38.957Z] >>> [apiv2][query] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ [none]
+[debug] [2025-04-06T16:22:38.958Z] >>> [apiv2][body] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ {"data":{"uid":"xWj6MYv0SgYGXLsbrmRpyIP1bdi2"}}
+[debug] [2025-04-06T16:22:38.966Z] [work-queue] {"queuedWork":["/share-8cabd/us-central1/grantAdminRole/-2025-04-06T16:22:38.966Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-04-06T16:22:38.966Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/share-8cabd/us-central1/grantAdminRole/-2025-04-06T16:22:38.966Z"],"workRunningCount":1}
+[debug] [2025-04-06T16:22:38.967Z] Accepted request POST /share-8cabd/us-central1/grantAdminRole/ --> us-central1-grantAdminRole
+[debug] [2025-04-06T16:22:38.971Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2025-04-06T16:22:38.971Z] DEBUG: [functions] Got req.url=/share-8cabd/us-central1/grantAdminRole/, mapping to path=/
+[debug] [2025-04-06T16:22:38.972Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-grantAdminRole)
+[debug] [2025-04-06T16:22:38.972Z] [functions] Beginning execution of "us-central1-grantAdminRole"
+[debug] [2025-04-06T16:22:38.972Z] DEBUG: [worker-us-central1-grantAdminRole-9809dd72-d7c9-4456-9395-3a703e512ceb]: BUSY
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-grantAdminRole"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[warn] !  functions: The Firebase Authentication emulator is not running, so calls to Firebase Authentication will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-grantAdminRole"},"extension":{},"message":"The Firebase Authentication emulator is not running, so calls to Firebase Authentication will affect production."}}
+[info] >  {"severity":"INFO","message":"✅ Admin role set for UID: xWj6MYv0SgYGXLsbrmRpyIP1bdi2"} {"user":{"severity":"INFO","message":"✅ Admin role set for UID: xWj6MYv0SgYGXLsbrmRpyIP1bdi2"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-grantAdminRole"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"INFO\",\"message\":\"✅ Admin role set for UID: xWj6MYv0SgYGXLsbrmRpyIP1bdi2\"}"}}
+[debug] [2025-04-06T16:22:40.405Z] DEBUG: Finishing up request with event=pause
+[debug] [2025-04-06T16:22:40.405Z] [functions] Finished "us-central1-grantAdminRole" in 1433.1806000000001ms
+[debug] [2025-04-06T16:22:40.405Z] DEBUG: [worker-us-central1-grantAdminRole-9809dd72-d7c9-4456-9395-3a703e512ceb]: IDLE
+[debug] [2025-04-06T16:22:40.405Z] DEBUG: Finishing up request with event=finish
+[debug] [2025-04-06T16:22:40.405Z] DEBUG: Finishing up request with event=close
+[debug] [2025-04-06T16:22:40.405Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-04-06T16:22:40.406Z] <<< [apiv2][status] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ 200
+[debug] [2025-04-06T16:22:40.406Z] <<< [apiv2][body] POST http://127.0.0.1:5000/share-8cabd/us-central1/grantAdminRole/ {"result":{"success":true,"message":"✅ Admin role set for UID: xWj6MYv0SgYGXLsbrmRpyIP1bdi2"}}

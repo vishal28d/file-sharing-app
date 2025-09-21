@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".AdminRoleActivity">
+
+    <TextView
+        android:id="@+id/tvRoleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit User Roles"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="40dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="3in"
+        app:layout_constraintTop_toBottomOf="@id/tvRoleTitle"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Department Heads Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Department Heads"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"/>
+
+            <ListView
+                android:id="@+id/listViewDepartmentHeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:scrollbars="vertical"
+                android:dividerHeight="1dp"/>
+
+            <!-- Managers Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Managers"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="20dp"/>
+
+            <ListView
+                android:id="@+id/listViewManagers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:scrollbars="vertical"
+
+                android:dividerHeight="1dp"/>
+
+            <!-- Employees Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Employees"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="20dp"/>
+
+            <ListView
+                android:id="@+id/listViewEmployees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:scrollbars="vertical"
+                android:dividerHeight="1dp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

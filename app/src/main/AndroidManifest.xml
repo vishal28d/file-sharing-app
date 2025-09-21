@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.secure_share">
+    <!-- Add Internet permission here -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/secure_share"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Material3.Light.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".AdminFileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FileUploadActivityAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".PasswordPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FileAdapter2"
+            android:exported="false" />
+        <activity
+            android:name=".FileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FileUploadActivityDeptHead"
+            android:exported="false" />
+        <activity
+            android:name=".PdfPageAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".PdfViewerActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddMemberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RSAHelper"
+            android:exported="false" />
+        <activity
+            android:name=".FileModel"
+            android:exported="false" />
+        <activity
+            android:name=".FileAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".FileDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FileUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployeeMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminRoleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DepartmentHeadMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManagerMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Secure_Share">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FileUploadActivityManager"
+            android:exported="false"
+            android:label="Send File as Manager" />
+    </application>
+
+</manifest>

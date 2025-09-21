@@ -1,0 +1,216 @@
+[debug] [2025-04-06T16:02:49.901Z] ----------------------------------------------------------------------
+[debug] [2025-04-06T16:02:49.903Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shenuka navod\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2025-04-06T16:02:49.903Z] CLI Version:   14.1.0
+[debug] [2025-04-06T16:02:49.904Z] Platform:      win32
+[debug] [2025-04-06T16:02:49.904Z] Node Version:  v22.14.0
+[debug] [2025-04-06T16:02:49.904Z] Time:          Sun Apr 06 2025 21:32:49 GMT+0530 (India Standard Time)
+[debug] [2025-04-06T16:02:49.904Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-06T16:02:49.907Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-04-06T16:02:50.086Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-06T16:02:50.087Z] > authorizing via signed-in user (shenukanavod12@gmail.com)
+[debug] [2025-04-06T16:02:50.087Z] [iam] checking project share-8cabd for permissions ["firebase.projects.get"]
+[debug] [2025-04-06T16:02:50.087Z] Checked if tokens are valid: false, expires at: 1743872412581
+[debug] [2025-04-06T16:02:50.087Z] Checked if tokens are valid: false, expires at: 1743872412581
+[debug] [2025-04-06T16:02:50.087Z] > refreshing access token with scopes: []
+[debug] [2025-04-06T16:02:50.088Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-04-06T16:02:50.088Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-06T16:02:50.560Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-04-06T16:02:50.560Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-06T16:02:50.569Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions [none]
+[debug] [2025-04-06T16:02:50.570Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions x-goog-quota-user=projects/share-8cabd
+[debug] [2025-04-06T16:02:50.570Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-04-06T16:02:50.899Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-04-06T16:02:50.899Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-04-06T16:02:52.286Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions 200
+[debug] [2025-04-06T16:02:52.286Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-04-06T16:02:52.290Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-04-06T16:02:52.322Z] defaultcredentials: writing to file C:\Users\Shenuka navod\AppData\Roaming\firebase\shenukanavod12_gmail_com_application_default_credentials.json
+[debug] [2025-04-06T16:02:52.323Z] DEBUG: Setting GAC to C:\Users\Shenuka navod\AppData\Roaming\firebase\shenukanavod12_gmail_com_application_default_credentials.json
+[debug] [2025-04-06T16:02:52.324Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:02:52.324Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:02:52.324Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig [none]
+[debug] [2025-04-06T16:02:53.551Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig 200
+[debug] [2025-04-06T16:02:53.552Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig {"projectId":"share-8cabd","databaseURL":"https://share-8cabd-default-rtdb.firebaseio.com","storageBucket":"share-8cabd.firebasestorage.app"}
+[debug] [2025-04-06T16:02:53.560Z] [functions] Watching "C:\Secure_share\functions" for Cloud Functions...
+[debug] [2025-04-06T16:02:53.563Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-04-06T16:03:01.375Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"Lint skipped\"",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/storage": "6.9.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^4.4.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "overrides": {
+    "@google-cloud/storage": "6.9.2"
+  },
+  "private": true
+}
+[debug] [2025-04-06T16:03:01.375Z] Building nodejs source
+[debug] [2025-04-06T16:03:01.375Z] Failed to find version of module node: reached end of search path C:\Secure_share\functions\node_modules
+[warn] !  functions: Your requested "node" version "20" doesn't match your global version "22". Using node@22 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-04-06T16:03:01.378Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-04-06T16:03:01.390Z] Found firebase-functions binary at 'C:\Secure_share\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8689
+
+[debug] [2025-04-06T16:03:02.933Z] Got response from /__/functions.yaml {"endpoints":{"createNewUser":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createNewUser"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2025-04-06T16:03:06.970Z] [functions] Loaded functions definitions from source: createNewUser.
+[debug] [2025-04-06T16:03:06.970Z] [functions[us-central1-createNewUser]] http function initialized (http://127.0.0.1:5000/share-8cabd/us-central1/createNewUser).
+[info] i  functions: Loaded functions: createNewUser 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
+[debug] [2025-04-06T16:05:49.975Z] ----------------------------------------------------------------------
+[debug] [2025-04-06T16:05:49.977Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shenuka navod\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2025-04-06T16:05:49.977Z] CLI Version:   14.1.0
+[debug] [2025-04-06T16:05:49.977Z] Platform:      win32
+[debug] [2025-04-06T16:05:49.977Z] Node Version:  v22.14.0
+[debug] [2025-04-06T16:05:49.977Z] Time:          Sun Apr 06 2025 21:35:49 GMT+0530 (India Standard Time)
+[debug] [2025-04-06T16:05:49.977Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-06T16:05:50.110Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-06T16:05:50.111Z] > authorizing via signed-in user (shenukanavod12@gmail.com)
+[debug] [2025-04-06T16:05:50.111Z] [iam] checking project share-8cabd for permissions ["firebase.projects.get"]
+[debug] [2025-04-06T16:05:50.112Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:05:50.112Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:05:50.112Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions [none]
+[debug] [2025-04-06T16:05:50.113Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions x-goog-quota-user=projects/share-8cabd
+[debug] [2025-04-06T16:05:50.113Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-04-06T16:05:51.802Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions 200
+[debug] [2025-04-06T16:05:51.802Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/share-8cabd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] !  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2025-04-06T16:05:51.805Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-04-06T16:05:51.872Z] defaultcredentials: writing to file C:\Users\Shenuka navod\AppData\Roaming\firebase\shenukanavod12_gmail_com_application_default_credentials.json
+[debug] [2025-04-06T16:05:51.876Z] DEBUG: Setting GAC to C:\Users\Shenuka navod\AppData\Roaming\firebase\shenukanavod12_gmail_com_application_default_credentials.json
+[debug] [2025-04-06T16:05:51.877Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:05:51.878Z] Checked if tokens are valid: true, expires at: 1743958969560
+[debug] [2025-04-06T16:05:51.878Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig [none]
+[debug] [2025-04-06T16:05:53.108Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig 200
+[debug] [2025-04-06T16:05:53.108Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/share-8cabd/adminSdkConfig {"projectId":"share-8cabd","databaseURL":"https://share-8cabd-default-rtdb.firebaseio.com","storageBucket":"share-8cabd.firebasestorage.app"}
+[debug] [2025-04-06T16:05:53.120Z] [functions] Watching "C:\Secure_share\functions" for Cloud Functions...
+[debug] [2025-04-06T16:05:53.122Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-04-06T16:06:00.882Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"Lint skipped\"",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/storage": "6.9.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^4.4.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "overrides": {
+    "@google-cloud/storage": "6.9.2"
+  },
+  "private": true
+}
+[debug] [2025-04-06T16:06:00.882Z] Building nodejs source
+[debug] [2025-04-06T16:06:00.882Z] Failed to find version of module node: reached end of search path C:\Secure_share\functions\node_modules
+[warn] !  functions: Your requested "node" version "20" doesn't match your global version "22". Using node@22 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-04-06T16:06:00.886Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-04-06T16:06:00.896Z] Found firebase-functions binary at 'C:\Secure_share\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8309
+
+[debug] [2025-04-06T16:06:01.355Z] Got response from /__/functions.yaml {"endpoints":{"createNewUser":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createNewUser"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2025-04-06T16:06:05.398Z] [functions] Loaded functions definitions from source: createNewUser.
+[debug] [2025-04-06T16:06:05.398Z] [functions[us-central1-createNewUser]] http function initialized (http://127.0.0.1:5001/share-8cabd/us-central1/createNewUser).
+[info] i  functions: Loaded functions: createNewUser 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
+[debug] [2025-04-06T16:12:51.814Z] DEBUG: File C:\Secure_share\functions\src\userFunctions.ts changed, reloading triggers
+[debug] [2025-04-06T16:12:52.822Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-04-06T16:12:59.898Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"Lint skipped\"",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/storage": "6.9.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^4.4.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "overrides": {
+    "@google-cloud/storage": "6.9.2"
+  },
+  "private": true
+}
+[debug] [2025-04-06T16:12:59.898Z] Building nodejs source
+[debug] [2025-04-06T16:12:59.898Z] Failed to find version of module node: reached end of search path C:\Secure_share\functions\node_modules
+[warn] !  functions: Your requested "node" version "20" doesn't match your global version "22". Using node@22 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-04-06T16:12:59.899Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-04-06T16:12:59.906Z] Found firebase-functions binary at 'C:\Secure_share\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8468
+
+[debug] [2025-04-06T16:13:00.369Z] Got response from /__/functions.yaml {"endpoints":{"createNewUser":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createNewUser"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2025-04-06T16:13:03.614Z] DEBUG: File C:\Secure_share\functions\src\index.ts changed, reloading triggers
+[debug] [2025-04-06T16:13:04.390Z] [functions] Loaded functions definitions from source: createNewUser.
+[debug] [2025-04-06T16:13:04.625Z] Validating nodejs source

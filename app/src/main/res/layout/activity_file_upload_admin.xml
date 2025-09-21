@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkbox_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast to All Users"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Department"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_departments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Role"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_roles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Recipient"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_recipients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_select_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select File"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/selectedFileText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No file selected"
+            android:textStyle="italic"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Securely" />
+    </LinearLayout>
+</ScrollView>
